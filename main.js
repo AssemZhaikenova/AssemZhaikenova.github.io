@@ -1,6 +1,6 @@
 function main(){
     event.preventDefault()
-    window.location.href ="index.html"
+    window.location.href ="index2.html"
 }
 function signup(e){
     event.preventDefault()
@@ -8,21 +8,21 @@ function signup(e){
     var email = document.getElementById('email').value;
     if(document.getElementById('email').value.length == 0){
         alert("Please fill in everything correctly")
-        window.location.href ="index.html"
+        window.location.href ="index2.html"
         localStorage.clear();
         return
     }
     var username = document.getElementById('username').value;
     if(document.getElementById('username').value.length == 0){
         alert("Please fill in everything correctly")
-        window.location.href ="index.html"
+        window.location.href ="index2.html"
         localStorage.clear();
         return
     }
     var pass = document.getElementById('password').value;
     if(document.getElementById('password').value.length == 0){
         alert("Please fill in everything correctly")
-        window.location.href ="index.html"
+        window.location.href ="index2.html"
         localStorage.clear();
         return
     }
@@ -53,7 +53,7 @@ function loginFunc(e){
     }else if(username == data.username && pass == data.password){
         result.innerHTML = 'Вы вошли успешно';
         sessionStorage.setItem('sessionuser', data.username);
-        window.location.href = "index.html";
+        window.location.href = "index2.html";
     }else{
         result.innerHTML = 'Неправильный пароль';
     }
@@ -66,7 +66,7 @@ function logout(){
 }
 function signup2(){
     event.preventDefault();
-    window.location.href =('index.html') 
+    window.location.href =('index2.html') 
 }
 function loginFunc2(){
     event.preventDefault();
@@ -81,4 +81,5 @@ const getRes = async(url) => {
         throw new Error(`status: ${res.status}`);
     }
     return await res.json()
+}
 }
